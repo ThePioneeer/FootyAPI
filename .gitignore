@@ -1,0 +1,10 @@
+
+FootyAPI/obj/
+
+FootyAPI/bin/Debug/netcoreapp2\.1/
+
+\.vs/FootyAPI/v15/Server/sqlite3/
+
+\.vs/FootyAPI/v15/
+
+\.vs/config/
