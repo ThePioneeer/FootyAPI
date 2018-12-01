@@ -14,5 +14,6 @@ namespace FootyAPI.Models
         public int GameId { get; set; }
         public DateTime Date { get; set; }
         public int VenueId { get; set; }
+        public string Score { get; set; }
     }
 }

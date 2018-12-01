@@ -4,14 +4,16 @@ using FootyAPI.Entities.Contexts;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace FootyAPI.Migrations
 {
     [DbContext(typeof(FootyDBContext))]
-    partial class FootyDBContextModelSnapshot : ModelSnapshot
+    [Migration("20181201185430_InitalDBPlan")]
+    partial class InitalDBPlan
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
