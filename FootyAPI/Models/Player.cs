@@ -13,5 +13,7 @@ namespace FootyAPI.Models
         public string PlayerName { get; set; }
         public DateTime Birthday { get; set; }
         public int Number { get; set; }
+        public int PositionId { get; set; }
+        public int TeamId { get; set; }
     }
 }
