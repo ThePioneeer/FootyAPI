@@ -1,4 +1,4 @@
-﻿namespace FootyAPI.Models
+﻿namespace FootyAPI.Entities.Models
 {
     public class PlayingPosition
     {
