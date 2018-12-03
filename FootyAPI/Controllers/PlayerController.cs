@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using FootyAPI.Models;
 using Microsoft.AspNetCore.Mvc;
 
 namespace FootyAPI.Controllers
@@ -11,9 +12,11 @@ namespace FootyAPI.Controllers
     public class PlayerController : ControllerBase
     {
         [HttpGet]
-        public ActionResult<string> Get()
+        public ActionResult<Player> Get()
         {
-            return "ur mom";
+            var proPlayer = new Player {Name = "Uko Melis", Number = 9, Goals = 50};
+
+            return proPlayer;
         }
     }
 }

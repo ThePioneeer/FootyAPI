@@ -5,6 +5,8 @@ using System.Threading.Tasks;
 using FootyAPI.Entities.Models;
 using FootyAPI.Models;
 using Microsoft.EntityFrameworkCore;
+using Player = FootyAPI.Entities.Models.Player;
+using Team = FootyAPI.Entities.Models.Team;
 
 namespace FootyAPI.Entities.Contexts
 {
