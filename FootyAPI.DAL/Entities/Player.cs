@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace FootyAPI.Entities.Models
+namespace FootyAPI.DAL.Entities
 {
     public class Player
     {

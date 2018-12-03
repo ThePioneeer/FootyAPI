@@ -1,12 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using FootyAPI.Entities.Models;
-using FootyAPI.Models;
+﻿using FootyAPI.Entities.Models;
 using Microsoft.EntityFrameworkCore;
 
-namespace FootyAPI.Entities.Contexts
+namespace FootyAPI.DAL.Entities.Contexts
 {
     public class FootyDBContext : DbContext
     {

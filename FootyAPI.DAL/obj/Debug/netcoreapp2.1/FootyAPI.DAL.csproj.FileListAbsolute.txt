@@ -1,0 +1,9 @@
+C:\dev\dev\FootyAPI\FootyAPI.DAL\obj\Debug\netcoreapp2.1\FootyAPI.DAL.csprojAssemblyReference.cache
+C:\dev\dev\FootyAPI\FootyAPI.DAL\obj\Debug\netcoreapp2.1\FootyAPI.DAL.csproj.CoreCompileInputs.cache
+C:\dev\dev\FootyAPI\FootyAPI.DAL\obj\Debug\netcoreapp2.1\FootyAPI.DAL.AssemblyInfoInputs.cache
+C:\dev\dev\FootyAPI\FootyAPI.DAL\obj\Debug\netcoreapp2.1\FootyAPI.DAL.AssemblyInfo.cs
+C:\dev\dev\FootyAPI\FootyAPI.DAL\bin\Debug\netcoreapp2.1\FootyAPI.DAL.deps.json
+C:\dev\dev\FootyAPI\FootyAPI.DAL\bin\Debug\netcoreapp2.1\FootyAPI.DAL.dll
+C:\dev\dev\FootyAPI\FootyAPI.DAL\bin\Debug\netcoreapp2.1\FootyAPI.DAL.pdb
+C:\dev\dev\FootyAPI\FootyAPI.DAL\obj\Debug\netcoreapp2.1\FootyAPI.DAL.dll
+C:\dev\dev\FootyAPI\FootyAPI.DAL\obj\Debug\netcoreapp2.1\FootyAPI.DAL.pdb
