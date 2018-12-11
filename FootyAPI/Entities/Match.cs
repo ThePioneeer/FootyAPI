@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace FootyAPI.Entities.Models
+namespace FootyAPI.Entities
 {
     public class Match
     {
@@ -14,6 +14,6 @@ namespace FootyAPI.Entities.Models
         public int HomeScore { get; set; }
         public int AwayScore { get; set; }
         public string PenaltyScore { get; set; }
-        public int PlayerofTheMatch { get; set; }
+        public int PlayerOfTheMatch { get; set; }
     }
 }

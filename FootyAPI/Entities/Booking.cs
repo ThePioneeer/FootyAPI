@@ -1,4 +1,4 @@
-﻿namespace FootyAPI.Entities.Models
+﻿namespace FootyAPI.Entities
 {
     public class Booking
     {

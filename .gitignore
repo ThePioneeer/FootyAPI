@@ -10,3 +10,11 @@ FootyAPI/bin/Debug/netcoreapp2\.1/
 \.vs/config/
 
 \.vs/FootyAPI/DesignTimeBuild/\.dtbcache
+
+FootyAPI\.DAL/obj/
+
+FootyAPI\.Logic/bin/Debug/netcoreapp2\.1/
+
+FootyAPI\.Logic/obj/Debug/netcoreapp2\.1/
+
+FootyAPI\.Logic/obj/

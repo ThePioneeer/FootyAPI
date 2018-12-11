@@ -3,7 +3,6 @@ using System;
 using FootyAPI.Entities.Contexts;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
-using Microsoft.EntityFrameworkCore.Metadata;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace FootyAPI.Migrations
@@ -15,15 +14,12 @@ namespace FootyAPI.Migrations
         {
 #pragma warning disable 612, 618
             modelBuilder
-                .HasAnnotation("ProductVersion", "2.1.4-rtm-31024")
-                .HasAnnotation("Relational:MaxIdentifierLength", 128)
-                .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+                .HasAnnotation("ProductVersion", "2.1.4-rtm-31024");
 
-            modelBuilder.Entity("FootyAPI.Entities.Models.Player", b =>
+            modelBuilder.Entity("FootyAPI.Entities.Booking", b =>
                 {
                     b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+                        .ValueGeneratedOnAdd();
 
                     b.Property<int>("BookingTime");
 
@@ -50,11 +46,28 @@ namespace FootyAPI.Migrations
                     b.ToTable("Bookings");
                 });
 
-            modelBuilder.Entity("FootyAPI.Entities.Models.Goal", b =>
+            modelBuilder.Entity("FootyAPI.Entities.Competition", b =>
                 {
                     b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+                        .ValueGeneratedOnAdd();
+
+                    b.Property<string>("CompetitionType");
+
+                    b.Property<string>("Description");
+
+                    b.Property<string>("Name");
+
+                    b.Property<string>("Season");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Competitions");
+                });
+
+            modelBuilder.Entity("FootyAPI.Entities.Goal", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd();
 
                     b.Property<int>("AssistByPlayerId");
 
@@ -79,30 +92,10 @@ namespace FootyAPI.Migrations
                     b.ToTable("Goals");
                 });
 
-            modelBuilder.Entity("FootyAPI.Models.Competition", b =>
+            modelBuilder.Entity("FootyAPI.Entities.Match", b =>
                 {
                     b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
-
-                    b.Property<string>("CompetitionType");
-
-                    b.Property<string>("Description");
-
-                    b.Property<string>("Name");
-
-                    b.Property<string>("Season");
-
-                    b.HasKey("Id");
-
-                    b.ToTable("Competitions");
-                });
-
-            modelBuilder.Entity("FootyAPI.Models.Match", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+                        .ValueGeneratedOnAdd();
 
                     b.Property<int>("AwayScore");
 
@@ -129,11 +122,10 @@ namespace FootyAPI.Migrations
                     b.ToTable("Matches");
                 });
 
-            modelBuilder.Entity("FootyAPI.Models.Player", b =>
+            modelBuilder.Entity("FootyAPI.Entities.Player", b =>
                 {
                     b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+                        .ValueGeneratedOnAdd();
 
                     b.Property<DateTime>("Birthday");
 
@@ -152,11 +144,10 @@ namespace FootyAPI.Migrations
                     b.ToTable("Players");
                 });
 
-            modelBuilder.Entity("FootyAPI.Models.PlayingPosition", b =>
+            modelBuilder.Entity("FootyAPI.Entities.PlayingPosition", b =>
                 {
                     b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+                        .ValueGeneratedOnAdd();
 
                     b.Property<string>("PositionName");
 
@@ -165,11 +156,10 @@ namespace FootyAPI.Migrations
                     b.ToTable("PlayingPositions");
                 });
 
-            modelBuilder.Entity("FootyAPI.Models.Team", b =>
+            modelBuilder.Entity("FootyAPI.Entities.Team", b =>
                 {
                     b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+                        .ValueGeneratedOnAdd();
 
                     b.Property<int>("GoalsAgainst");
 
@@ -181,11 +171,11 @@ namespace FootyAPI.Migrations
 
                     b.Property<int>("MatchesDrawn");
 
+                    b.Property<int>("MatchesLost");
+
                     b.Property<int>("MatchesPlayed");
 
                     b.Property<int>("MatchesWon");
-
-                    b.Property<int>("MathcehsLost");
 
                     b.Property<string>("Name");
 
@@ -196,13 +186,12 @@ namespace FootyAPI.Migrations
                     b.ToTable("Teams");
                 });
 
-            modelBuilder.Entity("FootyAPI.Models.Venue", b =>
+            modelBuilder.Entity("FootyAPI.Entities.Venue", b =>
                 {
                     b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+                        .ValueGeneratedOnAdd();
 
-                    b.Property<string>("Adress");
+                    b.Property<string>("Address");
 
                     b.Property<string>("Name");
 
