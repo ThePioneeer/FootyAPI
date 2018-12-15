@@ -1,4 +1,4 @@
-﻿namespace FootyAPI.Models
+﻿namespace FootyAPI.Logic.Models
 {
     public class Venue
     {

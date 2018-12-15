@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using FootyAPI.Entities.Contexts;
+using FootyAPI.Logic;
+using FootyAPI.Logic.Builders;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
@@ -29,6 +31,9 @@ namespace FootyAPI
         {
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
             services.AddDbContext<FootyDBContext>();
+
+            services.AddScoped<IMatchBuilder, MatchBuilder>();
+            services.AddScoped<IDBManager, DBManager>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

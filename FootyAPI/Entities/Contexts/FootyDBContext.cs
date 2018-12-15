@@ -1,11 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using FootyAPI.Models;
-using Microsoft.EntityFrameworkCore;
-using Player = FootyAPI.Entities.Player;
-using Team = FootyAPI.Entities.Team;
+﻿using Microsoft.EntityFrameworkCore;
 
 namespace FootyAPI.Entities.Contexts
 {

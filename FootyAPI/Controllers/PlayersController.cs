@@ -1,12 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
-using System.Threading.Tasks;
 using FootyAPI.Entities.Contexts;
-using FootyAPI.Models;
+using FootyAPI.Logic.Models;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.EntityFrameworkCore;
 
 namespace FootyAPI.Controllers
 {
@@ -17,8 +14,6 @@ namespace FootyAPI.Controllers
         [HttpGet]
         public ActionResult<List<Entities.Player>> Get()
         {
-            var proPlayer = new Player {Name = "Uko Melis", Number = 9, Goals = 50};
-
             using (var context = new FootyDBContext())
             {
                 var players = context.Players.ToList();
