@@ -1,7 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Text;
-using FootyAPI.Logic.Models;
+using FootyAPI.Models;
 
 namespace FootyAPI.Logic.Builders
 {

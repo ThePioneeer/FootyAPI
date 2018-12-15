@@ -1,13 +1,11 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-using FootyAPI.Logic.Models;
+﻿using FootyAPI.Entities.Contexts;
+using FootyAPI.Models;
 
 namespace FootyAPI.Logic
 {
     public class DBManager : IDBManager
     {
-        public DBManager()
+        public DBManager(FootyDBContext context)
         {
 
         }

@@ -1,4 +1,4 @@
-﻿using FootyAPI.Logic.Models;
+﻿using FootyAPI.Models;
 
 namespace FootyAPI.Logic
 {

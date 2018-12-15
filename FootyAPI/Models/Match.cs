@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace FootyAPI.Logic.Models
+namespace FootyAPI.Models
 {
     public class Match
     {
