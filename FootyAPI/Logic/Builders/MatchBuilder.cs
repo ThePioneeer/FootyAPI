@@ -5,9 +5,9 @@ namespace FootyAPI.Logic.Builders
 {
     public class MatchBuilder : IMatchBuilder
     {
-        private readonly IDBManager _dbManager;
+        private readonly IDbManager _dbManager;
 
-        public MatchBuilder(IDBManager dbManager)
+        public MatchBuilder(IDbManager dbManager)
         {
             _dbManager = dbManager ?? throw new ArgumentNullException(nameof(dbManager));
         }

@@ -14,5 +14,8 @@ namespace FootyAPI.Models
         public DateTime DateTime { get; set; }
         public string Referee { get; set; }
         public Competition Competition { get; set; }
+        public string PlayerOfTheMatch { get; set; }
+        public bool ExtraTime { get; set; }
+        public string PenaltyScore { get; set; }
     }
 }

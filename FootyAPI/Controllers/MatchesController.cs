@@ -1,5 +1,7 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using FootyAPI.Entities.Contexts;
+using FootyAPI.Logic;
 using FootyAPI.Logic.Builders;
 using FootyAPI.Models;
 using Microsoft.AspNetCore.Http;
@@ -11,9 +13,11 @@ namespace FootyAPI.Controllers
     [ApiController]
     public class MatchesController : ControllerBase
     {
-        public MatchesController(IMatchBuilder matchBuilder)
-        {
+        private readonly IDbManager _dbManager;
 
+        public MatchesController(IDbManager dbManager)
+        {
+            _dbManager = dbManager ?? throw new ArgumentNullException(nameof(dbManager));
         }
 
         [HttpGet]
@@ -25,10 +29,7 @@ namespace FootyAPI.Controllers
         [HttpPost]
         public ActionResult<HttpResponse> AddMatch([FromBody] Match match)
         {
-            var context = new FootyDBContext();
-
-            //context.Players.Add();
-            context.SaveChangesAsync();
+            _dbManager.AddMatch(match);
 
             return Ok();
         }

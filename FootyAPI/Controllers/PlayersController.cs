@@ -1,6 +1,8 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Linq;
 using FootyAPI.Entities.Contexts;
+using FootyAPI.Logic;
 using FootyAPI.Models;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
@@ -11,6 +13,13 @@ namespace FootyAPI.Controllers
     [ApiController]
     public class PlayersController : ControllerBase
     {
+        private readonly IDbManager _dbManager;
+
+        public PlayersController(IDbManager dbManager)
+        {
+            _dbManager = dbManager ?? throw new ArgumentNullException(nameof(dbManager));
+        }
+
         [HttpGet]
         public ActionResult<List<Entities.Player>> Get()
         {
@@ -21,15 +30,11 @@ namespace FootyAPI.Controllers
                 return players;
             }
         }
-
+         
         [HttpPost]
         public ActionResult<HttpResponse> AddPlayer([FromBody] Player player)
         {
-            var context = new FootyDBContext();
-            var playerEntity = new Entities.Player {PlayerName = player.Name, Number = player.Number};
-
-            context.Players.Add(playerEntity);
-            context.SaveChangesAsync();
+            _dbManager.AddPlayer(player);
 
             return Ok();
         }

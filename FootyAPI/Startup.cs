@@ -33,7 +33,7 @@ namespace FootyAPI
             services.AddDbContext<FootyDBContext>();
 
             services.AddScoped<IMatchBuilder, MatchBuilder>();
-            services.AddScoped<IDBManager, DBManager>();
+            services.AddScoped<IDbManager, DbManager>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

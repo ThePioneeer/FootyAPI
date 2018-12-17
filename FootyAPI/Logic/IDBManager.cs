@@ -2,8 +2,9 @@
 
 namespace FootyAPI.Logic
 {
-    public interface IDBManager
+    public interface IDbManager
     {
         void AddPlayer(Player player);
+        void AddMatch(Match match);
     }
 }

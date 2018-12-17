@@ -15,5 +15,6 @@ namespace FootyAPI.Entities
         public int AwayScore { get; set; }
         public string PenaltyScore { get; set; }
         public int PlayerOfTheMatch { get; set; }
+        public bool ExtraTime { get; set; }
     }
 }
